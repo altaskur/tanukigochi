@@ -1,0 +1,33 @@
+.idle {
+    background-image: url("../img/sprite/tanuki.png");
+}
+
+.cloud1 {
+    animation: cloud 180s linear infinite;
+    background-repeat: repeat-x;
+}
+
+.cloud2 {
+    animation: cloud 126s linear infinite;
+    background-repeat: repeat-x;
+}
+
+.cloud3 {
+    animation: cloud 90s linear infinite;
+    background-repeat: repeat-x;
+}
+
+.cloud4 {
+    animation: cloud 75s linear infinite;
+    background-repeat: repeat-x;
+}
+
+@keyframes cloud {
+    0% {
+        background-position: 0px
+    }
+
+    100% {
+        background-position: 30em;
+    }
+}

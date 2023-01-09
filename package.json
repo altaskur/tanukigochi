@@ -1,0 +1,35 @@
+{
+  "name": "tanukigochi",
+  "version": "0.1.0",
+  "description": "a proyect for practice ccs animations",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/altaskur/tanukigochi.git"
+  },
+  "keywords": [
+    "tanuki",
+    "css",
+    "css",
+    "animations",
+    "electron"
+  ],
+  "author": "altaskur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/altaskur/tanukigochi/issues"
+  },
+  "homepage": "https://github.com/altaskur/tanukigochi#readme",
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "eslint": "^8.30.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.6.0",
+    "eslint-plugin-promise": "^6.1.1"
+  }
+}

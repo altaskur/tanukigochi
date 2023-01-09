@@ -1,0 +1,10 @@
+@import url("./normalize.css");
+
+@import url("./base_variables.css");
+@import url("./animations.css");
+
+@import url("./general.css");
+@import url("./main.css");
+@import url("./backgrounds.css");
+@import url("./statusBar.css");
+@import url("./buttons.css");

@@ -1,0 +1,13 @@
+:root {
+    --border-color-principal: #D397CD;
+    --border-color-secondary: #985899;
+
+
+    --bg-color-principal: #73cac6dc;
+    --bg-color-secondary: #F6DADA;
+    --bg-color-tertiary: rgba(255, 252, 255, 0.64);
+
+
+    --border-radius: 15px;
+    --size: 30em;
+}

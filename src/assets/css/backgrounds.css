@@ -1,0 +1,67 @@
+div.background {
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+
+    border-radius: var(--border-radius);
+
+    background-repeat: repeat-x;
+
+    background-size: 30em 30em;
+}
+
+div.background:nth-child(1) {
+    background-image: url("../img/backgrounds/parallax/_11_background.png");
+    z-index: -11;
+}
+
+div.background:nth-child(2) {
+    background-image: url("../img/backgrounds/parallax/_10_distant_clouds.png");
+    z-index: -10;
+}
+
+div.background:nth-child(3) {
+    background-image: url("../img/backgrounds/parallax/_09_distant_clouds1.png");
+    z-index: -9;
+}
+
+div.background:nth-child(4) {
+    background-image: url("../img/backgrounds/parallax/_08_clouds.png");
+    z-index: -8;
+}
+
+div.background:nth-child(5) {
+    background-image: url("../img/backgrounds/parallax/_07_huge_clouds.png");
+    z-index: -7;
+}
+
+
+div.background:nth-child(6) {
+    background-image: url("../img/backgrounds/parallax/_06_hill2.png");
+    z-index: -6;
+}
+
+div.background:nth-child(7) {
+    background-image: url("../img/backgrounds/parallax/_05_hill1.png");
+    z-index: -5;
+}
+
+div.background:nth-child(8) {
+    background-image: url("../img/backgrounds/parallax/_04_bushes.png");
+    z-index: -4;
+}
+
+div.background:nth-child(9) {
+    background-image: url("../img/backgrounds/parallax/_03_distant_trees.png");
+    z-index: -3;
+}
+
+div.background:nth-child(9) {
+    background-image: url("../img/backgrounds/parallax/_02_trees\ and\ bushes.png");
+    z-index: -2;
+}
+
+div.background:nth-child(10) {
+    background-image: url("../img/backgrounds/parallax/_01_ground.png");
+    z-index: -1;
+}

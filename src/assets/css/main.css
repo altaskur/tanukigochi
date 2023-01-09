@@ -1,0 +1,41 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+main div.tanukiFrame {
+    border: 7px solid var(--border-color-principal);
+    background-color: var(--bg-color-principal);
+    border-radius: var(--border-radius);
+
+    width: var(--size);
+    height: var(--size);
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1;
+    overflow: hidden;
+}
+
+main div.tanukiFrame div.tanukiWrapper {
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+div.tanukiWrapper div.tanuki {
+    width: 231.66px;
+    height: 200px;
+
+    background-image: url("../img/sprite/tanuki.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+}
