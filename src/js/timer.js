@@ -12,9 +12,9 @@ const tanukiNotifications = {
   sleep: false
 }
 const tanukiMessages = {
-  hungry: '',
-  happiness: '',
-  sleep: ''
+  hungry: '🦝 🍒 Tengo hambre!',
+  happiness: '🦝Tanuki esta triste 😢😭 ',
+  sleep: '🦝Tanuki tiene sueño'
 }
 setInterval(globalTimer, 1000)
 
@@ -61,7 +61,7 @@ function showNotification (param) {
   }
   if (notification) {
     tanukiNotifications[param] = true
-    ipcRenderer.send('showNotification', { title: param, body: 'Atención tanuki esta a ' + tanukiStatus[param] + ' de ' + param })
+    ipcRenderer.send('showNotification', { title: param, body: tanukiMessages[param] })
   }
 }
 

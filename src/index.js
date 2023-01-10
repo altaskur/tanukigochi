@@ -1,15 +1,19 @@
-const { app, BrowserWindow, Notification, ipcMain } = require('electron')
+const { app, BrowserWindow, Notification, ipcMain, Tray, Menu } = require('electron')
 const path = require('path')
 
 function createWindow () {
   const win = new BrowserWindow({
     width: 1200,
     height: 800,
+    icon: path.join(path.join(__dirname, '/assets/img/logos/tanuki_logo.png')),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
       enableRemoteModule: true,
-      contextIsolation: false
+      contextIsolation: false,
+      setAppDetails: {
+        appId: 'tanukigochi'
+      }
     }
   })
 
@@ -18,10 +22,34 @@ function createWindow () {
   win.webContents.openDevTools()
   // win.removeMenu()
   win.setResizable(true)
+
+  win.on('minimize', function (event) {
+    event.preventDefault()
+    win.hide()
+  })
+
+  const tray = new Tray(path.join(__dirname, '/assets/img/logos/tanuki_logo.png'))
+  const contextMenu = Menu.buildFromTemplate([
+    {
+
+      label: 'Mostrar',
+      click: function () {
+        win.show()
+      }
+    },
+    { type: 'separator' },
+    {
+      label: 'Salir',
+      click: function () {
+        app.quit()
+      }
+    }
+  ])
+  tray.setToolTip('TanukiGochi center')
+  tray.setContextMenu(contextMenu)
 }
 
 function showNotification (title, body) {
-  console.log('showNoti')
   new Notification({ title, body }).show()
 }
 
