@@ -1,0 +1,120 @@
+.idle {
+    background-image: url("../img/sprite/tanuki.png");
+}
+
+
+.greetings {
+    animation: greetings 0.5s steps(1) infinite 0s;
+}
+
+@keyframes greetings {
+    0% {
+        background-position: -231px 0px;
+    }
+
+    50%,
+    100% {
+        background-position: -462px 0px;
+    }
+}
+
+.angry {
+    animation: angry 1.2s steps(2) infinite 0s backwards;
+}
+
+@keyframes angry {
+    0% {
+        background-position: 0px -200px;
+    }
+
+    50%,
+    100% {
+        background-position: -462px -200px;
+    }
+}
+
+.eating {
+    animation: eating 1s steps(1) infinite forwards;
+}
+
+@keyframes eating {
+    0% {
+        background-position: 0px -400px;
+    }
+
+    50%,
+    100% {
+        background-position: -232px -400px;
+    }
+
+}
+
+.sleep {
+
+    animation:
+        sleep 0.7s steps(1) 0s 1 forwards,
+        sleeping 2s steps(1) 0.8s infinite forwards;
+}
+
+@keyframes sleep {
+    0% {
+        background-position: -462px -400px;
+    }
+
+    25% {
+        background-position: -0px -600px;
+    }
+
+    50% {
+        background-position: -232px -600px;
+    }
+
+
+    75% {
+        background-position: -462px -600px;
+    }
+
+    100% {
+        background-position: 0px -800px;
+    }
+
+    100% {
+        background-position: 0px -800px;
+    }
+
+}
+
+@keyframes sleeping {
+    0% {
+        background-position: 0px -800px;
+    }
+
+    10% {
+        background-position: -232px -800px;
+    }
+
+    20% {
+        background-position: -462px -800px;
+    }
+
+    30% {
+        background-position: 0px -1000px;
+    }
+
+    30% {
+        background-position: 0px -1000px;
+    }
+
+    40% {
+        background-position: -462px -800px;
+    }
+
+    50% {
+        background-position: -232px -800px;
+    }
+
+    60% {
+        background-position: 0px -800px;
+    }
+
+}

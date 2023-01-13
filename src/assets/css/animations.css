@@ -1,7 +1,3 @@
-.idle {
-    background-image: url("../img/sprite/tanuki.png");
-}
-
 .cloud1 {
     animation: cloud 180s linear infinite;
     background-repeat: repeat-x;
