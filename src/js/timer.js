@@ -1,7 +1,7 @@
 const { ipcRenderer } = require('electron')
 
 const tanukiStatus = {
-  hungry: 100,
+  hungry: 20,
   happiness: 100,
   sleep: 0
 }
@@ -19,9 +19,9 @@ const tanukiMessages = {
 setInterval(globalTimer, 1000)
 
 function globalTimer () {
-  changeStatus('hungry', -1)
-  changeStatus('happiness', -1)
-  changeStatus('sleep', 1)
+  changeStatus('hungry', -0.03)
+  changeStatus('happiness', -0.05)
+  changeStatus('sleep', 0.01)
 }
 
 function changeStatus (param, value) {

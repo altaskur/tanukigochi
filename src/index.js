@@ -29,9 +29,11 @@ function createWindow () {
   })
 
   const tray = new Tray(path.join(__dirname, '/assets/img/logos/tanuki_logo.png'))
+  tray.on('double-click', (event) => {
+    win.show()
+  })
   const contextMenu = Menu.buildFromTemplate([
     {
-
       label: 'Mostrar',
       click: function () {
         win.show()
@@ -47,18 +49,21 @@ function createWindow () {
   ])
   tray.setToolTip('TanukiGochi center')
   tray.setContextMenu(contextMenu)
-}
+  function showNotification (title, body) {
+    const tanukiNotification = new Notification({ title, body })
+    tanukiNotification.show()
 
-function showNotification (title, body) {
-  new Notification({ title, body }).show()
+    tanukiNotification.on('click', (event) => {
+      win.show()
+    })
+  }
+  ipcMain.on('showNotification', (e, msg) => {
+    showNotification(msg.title, msg.body)
+  })
 }
 
 app.whenReady().then(() => {
   createWindow()
-
-  ipcMain.on('showNotification', (e, msg) => {
-    showNotification(msg.title, msg.body)
-  })
 
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) {

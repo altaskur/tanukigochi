@@ -54,6 +54,8 @@ div.background:nth-child(8) {
 div.background:nth-child(9) {
     background-image: url("../img/backgrounds/parallax/_03_distant_trees.png");
     z-index: -3;
+    background-repeat: repeat-x;
+    transform: scale(0.65) translateY(65px) scaleX(1.55);
 }
 
 div.background:nth-child(9) {

@@ -32,10 +32,13 @@ main div.tanukiFrame div.tanukiWrapper {
 }
 
 div.tanukiWrapper div.tanuki {
-    width: 231.66px;
+    width: 231px;
     height: 200px;
 
     background-image: url("../img/sprite/tanuki.png");
     background-repeat: no-repeat;
     background-size: auto;
+
+    transform: translateY(-20px);
+
 }

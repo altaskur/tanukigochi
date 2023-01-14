@@ -14,13 +14,20 @@ actionButtons.forEach(button => {
       onNewEvent('happiness')
     }
     if (button.textContent === '🍒') {
+      let eventType = 'annoyance'
       // eslint-disable-next-line
-      changeStatus('hungry', 5)
+      if (tanukiStatus.hungry < 90) {
+        // eslint-disable-next-line
+        changeStatus('hungry', 5)
+        eventType = 'hungry'
+      }
+      console.log(eventType)
       // eslint-disable-next-line
       console.log(tanukiStatus.hungry)
       // eslint-disable-next-line
-      onNewEvent('hungry')
+      onNewEvent(eventType)
     }
+
     if (button.textContent === '💤') {
       // eslint-disable-next-line
       changeStatus('sleep', -5)

@@ -3,11 +3,11 @@
 }
 
 
-.greetings {
-    animation: greetings 0.5s steps(1) infinite 0s;
+.happiness {
+    animation: happiness 0.5s steps(1) infinite 0s;
 }
 
-@keyframes greetings {
+@keyframes happiness {
     0% {
         background-position: -231px 0px;
     }
@@ -18,11 +18,11 @@
     }
 }
 
-.angry {
-    animation: angry 1.2s steps(2) infinite 0s backwards;
+.annoyance {
+    animation: annoyance 1.2s steps(2) infinite 0s backwards;
 }
 
-@keyframes angry {
+@keyframes annoyance {
     0% {
         background-position: 0px -200px;
     }
@@ -33,18 +33,18 @@
     }
 }
 
-.eating {
-    animation: eating 1s steps(1) infinite forwards;
+.hungry {
+    animation: hungry 1s steps(1) infinite forwards;
 }
 
-@keyframes eating {
+@keyframes hungry {
     0% {
         background-position: 0px -400px;
     }
 
     50%,
     100% {
-        background-position: -232px -400px;
+        background-position: -231px -400px;
     }
 
 }
@@ -53,7 +53,7 @@
 
     animation:
         sleep 0.7s steps(1) 0s 1 forwards,
-        sleeping 2s steps(1) 0.8s infinite forwards;
+        sleeping 7s steps(1) 0.8s infinite forwards;
 }
 
 @keyframes sleep {
@@ -90,7 +90,7 @@
     }
 
     10% {
-        background-position: -232px -800px;
+        background-position: -231px -800px;
     }
 
     20% {
@@ -110,7 +110,7 @@
     }
 
     50% {
-        background-position: -232px -800px;
+        background-position: -231px -800px;
     }
 
     60% {

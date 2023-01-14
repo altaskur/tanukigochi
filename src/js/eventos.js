@@ -3,15 +3,16 @@ const eventTypes = {
   hungry: 'hungry',
   sleep: 'sleep',
   happiness: 'happiness',
-  annoyance: 'annoyance3'
+  annoyance: 'annoyance'
 }
-
 const eventList = []
 
 let altasQueueStatus = false
+let lastStatus = 'idle'
 
 // eslint-disable-next-line
 function onNewEvent (type) {
+
   const isValidType = getEventType(type)
   if (isValidType) {
     addTanukiEvent(type)
@@ -27,22 +28,26 @@ function addTanukiEvent (type) {
 }
 
 function processAltasQueue () {
+  console.log(eventList)
   console.log('Process queue')
   if (!altasQueueStatus) {
     startTanukiEvent(eventList[0])
+    setTimeout(clearEvent, 4300)
   }
 }
 
 function startTanukiEvent (type) {
   altasQueueStatus = true
+
   getSound(type)
   startAnimation(type)
 }
 
 function startAnimation (type) {
   const tanukiDiv = document.querySelector('div.tanuki')
-  // quedarse con la ultima animación que existe variable lastStatus
-  tanukiDiv.classList.remove('idle')
+  tanukiDiv.classList.remove(lastStatus)
+  lastStatus = type
+  tanukiDiv.classList.add(type)
 }
 
 function getSound (type) {
@@ -63,12 +68,23 @@ function getSound (type) {
 
 function startSound (sound) {
   const audioDiv = document.querySelector('audio')
-  if (audioDiv.src.length === 0) {
-    audioDiv.src = sound
-    audioDiv.play()
-  } else {
+  if (audioDiv.src.length !== 0) {
     audioDiv.pause()
-    audioDiv.src = sound
-    audioDiv.play()
+  }
+  audioDiv.volume = 0.19
+  audioDiv.src = sound
+  audioDiv.play()
+}
+function clearEvent () {
+  console.log('Fin del evento')
+
+  startAnimation('idle')
+  eventList.shift()
+  console.log(eventList)
+  altasQueueStatus = false
+  if (eventList.length > 0) {
+    processAltasQueue()
+  } else {
+    console.log('Final de eventos')
   }
 }
