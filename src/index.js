@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Notification, ipcMain, Tray, Menu } = require('electron')
+const { app, BrowserWindow, Notification, ipcMain, Tray, Menu, webContents } = require('electron')
 const path = require('path')
 
 function createWindow () {
@@ -9,7 +9,7 @@ function createWindow () {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
-      enableRemoteModule: true,
+      enableRemoteModule: false,
       contextIsolation: false,
       setAppDetails: {
         appId: 'tanukigochi'
@@ -49,6 +49,7 @@ function createWindow () {
   ])
   tray.setToolTip('TanukiGochi center')
   tray.setContextMenu(contextMenu)
+
   function showNotification (title, body) {
     const tanukiNotification = new Notification({ title, body })
     tanukiNotification.show()
