@@ -53,7 +53,7 @@ function startAnimation (type) {
 function getSound (type) {
   const soundsList = {
     hungry: ['eat1.aac', 'eat2.aac'],
-    sleep: [''],
+    sleep: ['sleep.aac'],
     happiness: ['tanuki1.aac', 'tanuki2.aac'],
     annoyance: ['annoyance3.aac', 'annoyance2.aac', 'annoyance1.aac']
   }
